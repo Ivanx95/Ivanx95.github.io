@@ -1,0 +1,16 @@
+body{
+	background-color: #FCFCFD	;
+
+}
+
+
+
+
+
+#myBanner{
+	background-image: -webkit-linear-gradient(-66deg, blue, #c842f4);
+	background-image: -o-linear-gradient(-66deg, blue, #c842f4);
+	background-image: linear-gradient(-66deg, blue, #c842f4);
+	
+	
+}	
