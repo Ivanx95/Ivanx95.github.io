@@ -26,6 +26,5 @@ export function route(){
         break;
     }  
 
-    window.onhashchange=route();
 }
 

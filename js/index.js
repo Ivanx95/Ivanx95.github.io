@@ -8,7 +8,7 @@ window.onload = onInit;
 
 function onInit(){
 
-            route();
+    window.onhashchange=route();
 
 }
 
