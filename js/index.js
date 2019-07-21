@@ -8,8 +8,7 @@ window.onload = onInit;
 
 function onInit(){
 
-            let component = document.getElementById('mainComponent');
-            route(component);
+            route();
 
 }
 
