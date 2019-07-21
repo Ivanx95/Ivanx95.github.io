@@ -1,4 +1,5 @@
 import {banner} from './components/BannerComponent.js'
+import {card} from './components/CardComponent.js'
 
 export function route(){
 
@@ -8,7 +9,7 @@ export function route(){
     
     let component = document.getElementById('mainComponent');
 
-    let routeIndex= window.location.href;
+    let routeIndex= window.location.hash;
 
 
     var path = routeIndex.split("#");
@@ -18,12 +19,12 @@ export function route(){
         return;
     }
 
-    if(path.length>2){
+    if(path.length>1){
         switch(path[1]){
             case "Projects":
 
                     console.log("Redirect to projects");
-                    
+                    card(component);
             break;
 
             case "Home":
