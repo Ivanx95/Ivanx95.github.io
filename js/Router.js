@@ -12,19 +12,28 @@ export function route(){
 
 
     var path = routeIndex.split("#");
-    if(!path){
+    if(path.length<2){
         console.log(routeIndex);
         banner(component);
+        return;
     }
 
+    if(path.length>2){
+        switch(path[1]){
+            case "Projects":
 
-    switch(path){
-        case "Projects":
+                    console.log("Redirect to projects");
+                    
+            break;
 
-                console.log("Redirect to projects");
-                
-        break;
-    }  
+            case "Home":
+                    console.log(routeIndex);
+                    banner(component);
+                    console.log("Redirect to projects");
+                    
+            break;
+        }  
+    }
 
 }
 
