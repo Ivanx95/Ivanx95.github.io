@@ -23,14 +23,14 @@ export function route(){
         switch(path[1]){
             case "Projects":
 
-                    console.log("Redirect to projects");
+                    console.log("Redirect to "+path[1]);
                     card(component);
             break;
 
             case "Home":
                     console.log(routeIndex);
                     banner(component);
-                    console.log("Redirect to projects");
+                    console.log("Redirect to "+path[1]);
                     
             break;
         }  
