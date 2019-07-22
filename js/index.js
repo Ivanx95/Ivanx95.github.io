@@ -9,7 +9,7 @@ window.onload = onInit;
 function onInit(){
 
 
-
+    route();
     if ("onhashchange" in window) { // event supported?
         window.onhashchange = function () {
             route();
