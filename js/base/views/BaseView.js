@@ -19,7 +19,7 @@ var element;
         return doc;
     }).then(doc=>{
 
-        callback(doc.querySelector("body"));
+        callback(doc.querySelector("body").childNodes[0]);
     })
 
     return fetchPromise;

@@ -24,7 +24,7 @@ export function route(){
             case "Projects":
 
                     console.log("Redirect to "+path[1]);
-                    card(component);
+                    card(component,"springFx.png","springFx.png", "Spring javafx");
             break;
 
             case "Home":
