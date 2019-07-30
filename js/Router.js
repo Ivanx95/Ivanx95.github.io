@@ -1,5 +1,7 @@
 import {banner} from './components/BannerComponent.js'
 import {card} from './components/CardComponent.js'
+import {projects} from './components/ProjectsComponent.js'
+
 
 export function route(){
 
@@ -24,7 +26,7 @@ export function route(){
             case "Projects":
 
                     console.log("Redirect to "+path[1]);
-                    card(component,"springFx.png","springFx.png", "Spring javafx");
+                    projects(component);
             break;
 
             case "Home":

@@ -2,14 +2,12 @@
 import { render} from '../base/baseComponent.js';
 import {createView} from '../base/views/BaseView.js';
 import {localPath} from '../base/LocalPath.js';
+
+
 export function card( fatherComponent, primaryImage, secondaryImage, title, content){
 
     var cardPromise  =createView("js/components/Card.html", element=>{
     
-        while (fatherComponent.hasChildNodes()){
-            fatherComponent.removeChild(fatherComponent.lastChild);
-        }
-
          var figure2=element.querySelector(".is-48x48");
          var img2 =figure2.childNodes[1];
 
@@ -25,3 +23,4 @@ export function card( fatherComponent, primaryImage, secondaryImage, title, cont
 
 
 }
+
