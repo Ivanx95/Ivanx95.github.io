@@ -8,6 +8,11 @@ export function card( fatherComponent, primaryImage, secondaryImage, title, cont
 
     var cardPromise  =createView("js/components/Card.html", element=>{
     
+
+        while (fatherComponent.firstChild) {
+            fatherComponent.removeChild(fatherComponent.firstChild);
+        }
+
          var figure2=element.querySelector(".is-48x48");
          var img2 =figure2.childNodes[1];
 

@@ -19,7 +19,8 @@ var element;
         return doc;
     }).then(doc=>{
 
-        return doc.querySelector("body").childNodes[0];
+        let targetElement =doc.querySelector("body").childNodes[0];
+        return targetElement;
     })
 
     return fetchPromise;
