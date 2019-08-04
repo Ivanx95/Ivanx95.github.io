@@ -49,9 +49,9 @@ export async function projects(fatherComponent){
     element.appendChild(col2);
     element.appendChild(col1);
 
-    card(col1,"springFx.png","springFx.png", "Spring javafx");
-    card(col2,"springFx.png","springFx.png", "Spring javafx");
-    card(col3,"springFx.png","springFx.png", "Spring javafx");
+    card(col1,"springFx.png","springFx.png", "Spring javafx", "Awesome Text");
+    card(col2,"springFx.png","springFx.png", "Spring javafx", "Awesome Text2");
+    card(col3,"springFx.png","springFx.png", "Spring javafx", "Awesome Text3");
 
 
 }
