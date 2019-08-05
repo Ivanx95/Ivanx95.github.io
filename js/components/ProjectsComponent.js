@@ -49,9 +49,9 @@ export async function projects(fatherComponent){
     element.appendChild(col2);
     element.appendChild(col1);
 
-    card(col1,"springFx.png","springFx.png", "Spring javafx", "Awesome Text");
-    card(col2,"springFx.png","springFx.png", "Spring javafx", "Awesome Text2");
-    card(col3,"springFx.png","springFx.png", "Spring javafx", "Awesome Text3");
+    card(col1,"springFx.png","springFx.png", "Spring javafx", "SimplePTV made with spring-boot-support and javafx 8");
+    card(col2,"electron.png","electron.png", "SimplePTV Electron", "SimplePTV made with ElectronJS  Bulma CSS and Sequelize ");
+    card(col3,"electron.png","electron.png", "Java c++ legacy mix", "JVM controlled by a C program");
 
 
 }
