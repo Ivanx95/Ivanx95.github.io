@@ -51,7 +51,7 @@ export async function projects(fatherComponent){
 
     card(col1,"springFx.png","springFx.png", "Spring javafx", "SimplePTV made with spring-boot-support and javafx 8");
     card(col2,"electron.png","electron.png", "SimplePTV Electron", "SimplePTV made with ElectronJS  Bulma CSS and Sequelize ");
-    card(col3,"electron.png","electron.png", "Java c++ legacy mix", "JVM controlled by a C program");
+    card(col3,"java_c.png","java_c.png", "Java c++ legacy mix", "JVM controlled by a C program");
 
 
 }
