@@ -16,3 +16,19 @@ body{
 }	
 
 
+
+.intro-card {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: cubic-bezier(.14, .71, .29, .86);
+    animation-timing-function: cubic-bezier(.14, .71, .29, .86);
+    -webkit-transform-origin: center center;
+    transform-origin: center center
+}
+
+.intro-card {
+    -webkit-animation-name: bdSlideDown;
+    animation-name: bdSlideDown
+}

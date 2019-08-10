@@ -19,32 +19,27 @@ export async function projects(fatherComponent){
 
     prepareElement(fatherComponent);
 
-    
-
     var element  = await createView("js/components/Projects.html");
-
-    fatherComponent.appendChild(element);
-
-    element=element.querySelector(".columns");
-
-
     
-
-    const instanceOne = new LoaderSingleton();
-  
-    const loader =  await  instanceOne.getLoader();
-
-    const loader2 =  await  instanceOne.getLoader();
-    const loader3 =  await  instanceOne.getLoader();
+    element=element.querySelector(".intro-columns");
     
     const col3 = await column();
     const col2 = await column();
     const col1 = await column();
+    
+        /*
 
-    col3.appendChild(loader);
-    col2.appendChild(loader2);
-    col1.appendChild(loader3);
+        const instanceOne = new LoaderSingleton();
 
+        const loader =  await  instanceOne.getLoader();
+
+        const loader2 =  await  instanceOne.getLoader();
+        const loader3 =  await  instanceOne.getLoader();
+
+        col3.appendChild(loader);
+        col2.appendChild(loader2);
+        col1.appendChild(loader3);
+        */
     element.appendChild(col3);
     element.appendChild(col2);
     element.appendChild(col1);
@@ -53,5 +48,5 @@ export async function projects(fatherComponent){
     card(col2,"electron.png","electron.png", "SimplePTV Electron", "SimplePTV made with ElectronJS  Bulma CSS and Sequelize ");
     card(col3,"java_c.png","java_c.png", "Java c++ legacy mix", "JVM controlled by a C program");
 
-
+    fatherComponent.appendChild(element);
 }

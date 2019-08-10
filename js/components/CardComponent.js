@@ -23,10 +23,10 @@ export function card( fatherComponent, primaryImage, secondaryImage, title, cont
          img2.src= url+localPath+"assets/"+secondaryImage;
          img1.src= url+localPath+"assets/"+primaryImage;
 
-        var titleNode=element.querySelector(".title");
+        var titleNode=element.querySelector(".intro-title");
         titleNode.innerHTML=title;
 
-        var contentNode=element.querySelector(".content");
+        var contentNode=element.querySelector(".intro-content");
         contentNode.innerHTML=content;
 
         fatherComponent.appendChild(element);
