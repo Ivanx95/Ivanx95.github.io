@@ -16,7 +16,7 @@ export async function labs(fatherComponent){
   loadScript("https://docs.opencv.org/3.3.1/opencv.js", function(){
 
         console.log('OpenCV fully loaded');
-        let openCvBanner =  fatherComponent.getElementById('openCvBanner');
+        let openCvBanner =  document.getElementById('openCvBanner');
         if(openCvBanner!== undefined){
           openCvBanner.innerHTML="OpenCV fully loaded";
         }
