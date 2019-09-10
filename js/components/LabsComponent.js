@@ -19,6 +19,14 @@ export async function labs(fatherComponent){
         let openCvBanner =  document.getElementById('openCvBanner');
         if(openCvBanner!== undefined){
           openCvBanner.innerHTML="OpenCV fully loaded";
+          
         }
+        onOpenCvLoaded();
     });
+  
+  
+  
+}
+
+onOpenCvLoaded(){
 }
