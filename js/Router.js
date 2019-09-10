@@ -1,6 +1,7 @@
 import {banner} from './components/BannerComponent.js'
 import {card} from './components/CardComponent.js'
 import {projects} from './components/ProjectsComponent.js'
+import {labs} from './components/LabsComponent.js'
 
 
 export function route(){
@@ -32,6 +33,13 @@ export function route(){
             case "Home":
                     console.log(routeIndex);
                     banner(component);
+                    console.log("Redirect to "+path[1]);
+                    
+            break;
+                
+            case "Labs":
+                    console.log(routeIndex);
+                    labs(component);
                     console.log("Redirect to "+path[1]);
                     
             break;
