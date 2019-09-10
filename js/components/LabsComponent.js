@@ -18,7 +18,7 @@ export async function labs(fatherComponent){
         console.log('OpenCV fully loaded');
         let openCvBanner =  fatherComponent.getElementById('openCvBanner');
         if(openCvBanner!== undefined){
-          openCvBanner.innerHTML=OpenCV fully loaded;
+          openCvBanner.innerHTML="OpenCV fully loaded";
         }
     });
 }
