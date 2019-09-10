@@ -21,12 +21,9 @@ export async function labs(fatherComponent){
           openCvBanner.innerHTML="OpenCV fully loaded";
           
         }
-        onOpenCvLoaded();
+       
     });
   
   
   
-}
-
-onOpenCvLoaded(){
 }
