@@ -47,18 +47,22 @@ try {
          if(openCvBanner!=null){
            openCvBanner.innerHTML="OpenCV fully loaded";
           
-           var imgElement = card2.querySelector(".canvas");
+           var imgElement = card.querySelector(".canvas");
    
            let inputFile =fileInput.querySelector('.file-input');
 
            inputFile.addEventListener("change", (e) => {
 
-
+               var context = imgElement.getContext('2d');
  
-            imgElement.src = URL.createObjectURL(e.target.files[0]);
-
-
+               var imageObj = new Image();
  
+               imageObj.onload = function() {
+ 
+                  context.drawImage(imageObj, 69, 50);
+ 
+               };
+                imageObj.src = URL.createObjectURL(e.target.files[0]);
              }, false);
           
            let btnExecute = fileInput.querySelector('#btnAction');
