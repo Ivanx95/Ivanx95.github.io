@@ -6,6 +6,8 @@ import {createView} from '../base/views/BaseViewPromise.js';
 import {loadScript} from './Utils/LoadScript.js';
 
 import {CardComp} from './CardComponent2.js';
+
+import {canvasCard} from './CanvasCardComponent.js';
 import {FileInput} from './FileInputComponent.js';
 import {prepareElement} from '../base/views/PrepareSwitch.js';
 
