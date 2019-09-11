@@ -7,7 +7,7 @@ export async function canvasCard( ){
 
 
 
-    let canvas = await  createView("js/base/views/Column.html");
+    let canvas = await  createView("js/components/CanvasCard.html");
 
 
     return canvas;
