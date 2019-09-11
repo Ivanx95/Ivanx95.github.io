@@ -46,7 +46,15 @@ try {
            let inputFile =fileInput.querySelector('.file-input');
 
            inputFile.addEventListener("change", (e) => {
-              imgElement.src = URL.createObjectURL(e.target.files[0]);
+            
+               var context = imgElement.getContext('2d');
+               var imageObj = new Image();
+
+               imageObj.onload = function() {
+                  context.drawImage(imageObj, 69, 50);
+               };
+                imageObj.src = URL.createObjectURL(e.target.files[0]);
+          
            }, false);
           
            let btnExecute = fileInput.querySelector('#btnAction');
