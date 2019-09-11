@@ -1,7 +1,6 @@
 
 
-import {createView} from '../base/view/BaseViewPromise.js';
-
+import {createView} from '../base/views/BaseViewPromise.js';
 
 
 export async function canvasCard( ){
