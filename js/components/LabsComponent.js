@@ -21,15 +21,21 @@ try {
    fatherComponent.appendChild(element);
     
     const fileInputComp=  new FileInput();
-    let fileInput = await fileInputComp.getFileInput();
-    const col1 = await column();
-    let mixFileInput = {".intro-content":fileInput};
-    const card = new CardComp(col1,"","", "Image Search","",mixFileInput);
-    const col2 = await column();
-
-    const card2 = await canvasCard("Output");
-    col2.appendChild(card2);
   
+    let fileInput = await fileInputComp.getFileInput();
+  
+    const col1 = await column();
+  
+    let mixFileInput = {".intro-content":fileInput};
+  
+    const card = await canvasCard("Output",mixFileInput);
+  
+    const col2 = await column();
+  
+    const card2 = await canvasCard("Output");
+  
+    col2.appendChild(card2);
+    col1.appendChild(card);
     loadScript("https://docs.opencv.org/3.3.1/opencv.js", function(){
 
         var introColumns =element.querySelector(".intro-columns");
