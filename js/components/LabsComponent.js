@@ -28,11 +28,12 @@ try {
   
     let mixFileInput = {".media-content":fileInput};
   
-    const card = await canvasCard("Input",mixFileInput);
+    var mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"inputCanvas"}};
+    const card = await canvasCard("Input",mixFileInput,mixValueProperties);
     
-    let mixValueProperties = {selector:".media-content", property:"id", valueProperty:"inputCanvas"};
+    mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"outputcanvas"}];
   
-    var array1=[mixValueProperties];
+
     const col2 = await column();
   
     const card2 = await canvasCard("Output",null,array1);
