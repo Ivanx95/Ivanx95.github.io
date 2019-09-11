@@ -30,7 +30,7 @@ try {
   
     const card = await canvasCard("Input",mixFileInput);
     
-    let mixValueProperties = {".media-content", "id","inputCanvas"};
+    let mixValueProperties = {selector:".media-content", property:"id", valueProperty:"inputCanvas"};
     const col2 = await column();
   
     const card2 = await canvasCard("Output",null,mixValueProperties);
