@@ -93,11 +93,12 @@ function onExecuteOpenCV(imgElement,imageOutPut){
     console.log('execute');
 
     let src = cv.imread('inputCanvas');
-    let dst = new cv.Mat();
+    let dstX = new cv.Mat();
     // To distinguish the input and output, we graying the image.
     // You can try different conversions.
-    cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
-    cv.imshow('outputCanvas', dst);
+    cv.cvtColor(src, src, cv.COLOR_RGBA2GRAY);
+    cv.Sobel(src,dstX,cv.CV_8U,1,0,3,1,0,cv.BORDER_DEFAULT);
+    cv.imshow('outputCanvas', dstX);
     src.delete();
-    dst.delete();
+    dstX.delete();
 }
