@@ -31,9 +31,11 @@ try {
     const card = await canvasCard("Input",mixFileInput);
     
     let mixValueProperties = {selector:".media-content", property:"id", valueProperty:"inputCanvas"};
+  
+    var array1=[mixValueProperties];
     const col2 = await column();
   
-    const card2 = await canvasCard("Output",null,mixValueProperties);
+    const card2 = await canvasCard("Output",null,array1);
   
     col2.appendChild(card2);
     col1.appendChild(card);
