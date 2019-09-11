@@ -29,7 +29,7 @@ export async function canvasCard(title,childNodes,updateSelectors){
                    console.log(element);
                    let auxElement = canvas.querySelector(element.selector);
                    if(auxElement){
-                      auxElement.[element.property]=element.valueProperty;
+                      auxElement[element.property]=element.valueProperty;
                    }
             });
           
