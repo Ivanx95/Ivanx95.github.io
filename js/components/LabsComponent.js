@@ -27,7 +27,8 @@ try {
 
    const col2 = await column();
 
-  const card2 = new CardComp(col2,"","", "Output","");
+  const card2 = canvasCard();
+  col2.appendChild(card2);
     loadScript("https://docs.opencv.org/3.3.1/opencv.js", function(){
 
         var introColumns =element.querySelector(".intro-columns");
