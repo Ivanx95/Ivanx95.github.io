@@ -1,7 +1,7 @@
 import {createView} from '../base/views/BaseViewPromise.js';
 
 
-export async function canvasCard(title,childNodes,id, selector){
+export async function canvasCard(title,childNodes,updateSelectors){
 
 
 
@@ -20,9 +20,19 @@ export async function canvasCard(title,childNodes,id, selector){
              }
 
         }
-    if(id){
-          let auxElement = canvas.querySelector(selector);
-            auxElement.id=id;
+    if(updateSelectors){
+           const entries = Object.entries(updateSelectors);
+
+             for (const [keyElement, property,valueProperty] of entries) {
+
+                let auxElement = canvas.querySelector(keyElement);
+
+                 if(auxElement){
+                      auxElement.[property]=valueProperty;
+                 }
+             }
+         
+          
     }
 
     return canvas;
