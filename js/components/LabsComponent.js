@@ -22,7 +22,7 @@ try {
     let fileInput = await fileInputComp.getFileInput();
     const col1 = await column();
     let mixFileInput = {".intro-content":fileInput};
-    const card = new CardComp(col1,"","", "Lorem","",mixFileInput);
+    const card = new CardComp(col1,"","", "Image Search","",mixFileInput);
    
 
 
