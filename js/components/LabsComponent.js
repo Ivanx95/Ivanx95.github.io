@@ -28,7 +28,7 @@ try {
   
     let mixFileInput = {".media-content":fileInput};
   
-    const card = await canvasCard("Output",mixFileInput);
+    const card = await canvasCard("Input",mixFileInput);
   
     const col2 = await column();
   
