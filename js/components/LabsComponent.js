@@ -27,7 +27,7 @@ try {
     const card = new CardComp(col1,"","", "Image Search","",mixFileInput);
     const col2 = await column();
 
-    const card2 = await canvasCard();
+    const card2 = await canvasCard("Output");
     col2.appendChild(card2);
   
     loadScript("https://docs.opencv.org/3.3.1/opencv.js", function(){
