@@ -31,7 +31,7 @@ try {
     var mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"inputCanvas"}};
     const card = await canvasCard("Input",mixFileInput,mixValueProperties);
     
-    mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"outputcanvas"}];
+    mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"outputCanvas"}];
   
 
     const col2 = await column();
