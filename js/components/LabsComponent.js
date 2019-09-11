@@ -28,7 +28,7 @@ try {
   
     let mixFileInput = {".media-content":fileInput};
   
-    var mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"inputCanvas"}};
+    var mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"inputCanvas"}];
     const card = await canvasCard("Input",mixFileInput,mixValueProperties);
     
     mixValueProperties = [{selector:".canvas", property:"id", valueProperty:"outputCanvas"}];
