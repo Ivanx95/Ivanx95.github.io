@@ -41,7 +41,7 @@ try {
          if(openCvBanner!=null){
            openCvBanner.innerHTML="OpenCV fully loaded";
           
-           var imgElement = fatherComponent.querySelector(".is-4by3").childNodes[1];
+           var imgElement = card2.querySelector(".canvas");
    
            let inputFile =fileInput.querySelector('.file-input');
 
