@@ -67,7 +67,7 @@ try {
           
            let btnExecute = fileInput.querySelector('#btnAction');
            btnExecute.addEventListener("click", (e) =>{
-             onExecuteOpenCV();
+             onExecuteOpenCV(imgElement);
            });
         }
 
@@ -84,7 +84,16 @@ catch(error) {
   
 }
 
-function onExecuteOpenCV(fileInput){
+function onExecuteOpenCV(imgElement,imageOutPut){
    
-  console.log('execute');
+    console.log('execute');
+
+    let src = cv.imread(imgElement);
+  let dst = new cv.Mat();
+  // To distinguish the input and output, we graying the image.
+  // You can try different conversions.
+  cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
+  cv.imshow(imageOutPut, dst);
+  src.delete();
+  dst.delete();
 }
