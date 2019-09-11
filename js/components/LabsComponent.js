@@ -31,14 +31,6 @@ try {
         element=element.querySelector(".intro-columns");
 
          element.appendChild(col1);
-         
-         
-
-
-        
-
-        
-   
 
         console.log('OpenCV fully loaded');
         let openCvBanner =  fatherComponent.querySelector('#openCvBanner');
@@ -52,7 +44,11 @@ try {
         inputFile.addEventListener("change", (e) => {
             imgElement.src = URL.createObjectURL(e.target.files[0]);
         }, false);
-
+          
+           let btnExecute = fileInput.querySelector('#btnAction');
+           btnExecute.addEventListener("click", (e) =>{
+             onExecuteOpenCV();
+           });
         }
 
     });
@@ -68,6 +64,7 @@ catch(error) {
   
 }
 
-function onOpenCvLoad(){
-
+function onExecuteOpenCV(fileInput){
+   
+  console.log('execute');
 }
