@@ -36,7 +36,7 @@ try {
 
     const col2 = await column();
   
-    const card2 = await canvasCard("Output",null,array1);
+    const card2 = await canvasCard("Output",null,mixValueProperties);
   
     col2.appendChild(card2);
     col1.appendChild(card);
