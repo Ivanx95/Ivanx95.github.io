@@ -13,7 +13,10 @@ export async function canvasCard(title,childNodes){
              const entries = Object.entries(childNodes);
              for (const [keyElement, child] of entries) {
                 let auxElement = element.querySelector(keyElement);
-                auxElement.appendChild(child);
+                 if(auxElement){
+                     auxElement.appendChild(child);
+                 }
+                
              }
 
         }
