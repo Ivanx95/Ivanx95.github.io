@@ -25,13 +25,15 @@ try {
     const card = new CardComp(col1,"","", "Image Search","",mixFileInput);
    
 
+   const col2 = await column();
 
+  const card2 = new CardComp(col2,"","", "Output","");
     loadScript("https://docs.opencv.org/3.3.1/opencv.js", function(){
 
         element=element.querySelector(".intro-columns");
 
          element.appendChild(col1);
-
+         element.appendChild(col2);
         console.log('OpenCV fully loaded');
         let openCvBanner =  fatherComponent.querySelector('#openCvBanner');
         if(openCvBanner!=null){
