@@ -1,4 +1,3 @@
-import {createView} from '../base/views/BaseViewPromise.js';
 
 
 export async function canvasCard(title,childNodes,updateSelectors){
@@ -21,17 +20,15 @@ export async function canvasCard(title,childNodes,updateSelectors){
 
         }
     if(updateSelectors){
-           const entries = Object.entries(updateSelectors);
+        
 
-             for (const [keyElement, property,valueProperty] of entries) {
-
-                let auxElement = canvas.querySelector(keyElement);
-
-                 if(auxElement){
-                      auxElement.[property]=valueProperty;
-                 }
-             }
-         
+            updateSelectors.forEach(function(element) {
+                   console.log(element);
+                   let auxElement = canvas.querySelector(element.selector);
+                   if(auxElement){
+                      auxElement.[element.property]=element.valueProperty;
+                   }
+            });
           
     }
 
