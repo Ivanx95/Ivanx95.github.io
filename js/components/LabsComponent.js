@@ -117,7 +117,7 @@ function onExecuteOpenCV(imgElement,imageOutPut){
                                     Math.round(Math.random() * 255));
       cv.drawContours(dst, hull, i, colorHull, 1, 8, hierarchy, 0);
   }
-  cv.imshow('canvasOutput', dst);
+  cv.imshow('outputCanvas', dst);
   src.delete(); dst.delete(); hierarchy.delete(); contours.delete(); hull.delete();
 
   /*
