@@ -97,7 +97,8 @@ function onExecuteOpenCV(imgElement,imageOutPut){
     // To distinguish the input and output, we graying the image.
     // You can try different conversions.
     cv.cvtColor(src, src, cv.COLOR_RGBA2GRAY);
-    cv.Laplacian(src, dstX, cv.CV_8U, 1, 1, 0, cv.BORDER_DEFAULT);
+    cv.Canny(src, dstx, 50, 100, 3, false);
+    //cv.Laplacian(src, dstX, cv.CV_8U, 1, 1, 0, cv.BORDER_DEFAULT);
     cv.imshow('outputCanvas', dstX);
     src.delete();
     dstX.delete();
