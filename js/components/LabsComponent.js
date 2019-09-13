@@ -92,8 +92,35 @@ function onExecuteOpenCV(imgElement,imageOutPut){
    
     console.log('execute');
 
-    let src = cv.imread('inputCanvas');
-    let dstX = new cv.Mat();
+   // let src = cv.imread('inputCanvas');
+   // let dstX = new cv.Mat();
+  let src = cv.imread('inputCanvas');
+  let dst = cv.Mat.zeros(src.rows, src.cols, cv.CV_8UC3);
+  cv.cvtColor(src, src, cv.COLOR_RGBA2GRAY, 0);
+  cv.threshold(src, src, 100, 200, cv.THRESH_BINARY);
+  let contours = new cv.MatVector();
+  let hierarchy = new cv.Mat();
+  let hull = new cv.MatVector();
+  cv.findContours(src, contours, hierarchy, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE);
+// approximates each contour to convex hull
+  for (let i = 0; i < contours.size(); ++i) {
+      let tmp = new cv.Mat();
+      let cnt = contours.get(i);
+    // You can try more different parameters
+      cv.convexHull(cnt, tmp, false, true);
+      hull.push_back(tmp);
+      cnt.delete(); tmp.delete();
+  }
+// draw contours with random Scalar
+  for (let i = 0; i < contours.size(); ++i) {
+      let colorHull = new cv.Scalar(Math.round(Math.random() * 255), Math.round(Math.random() * 255),
+                                    Math.round(Math.random() * 255));
+      cv.drawContours(dst, hull, i, colorHull, 1, 8, hierarchy, 0);
+  }
+  cv.imshow('canvasOutput', dst);
+  src.delete(); dst.delete(); hierarchy.delete(); contours.delete(); hull.delete();
+
+  /*
     // To distinguish the input and output, we graying the image.
     // You can try different conversions.
     cv.cvtColor(src, src, cv.COLOR_RGBA2GRAY);
@@ -101,5 +128,5 @@ function onExecuteOpenCV(imgElement,imageOutPut){
     //cv.Laplacian(src, dstX, cv.CV_8U, 1, 1, 0, cv.BORDER_DEFAULT);
     cv.imshow('outputCanvas', dstX);
     src.delete();
-    dstX.delete();
+    dstX.delete();*/
 }
