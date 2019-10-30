@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<!-- Place this tag where you want the button to render. -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-	<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>Simple PTV</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script> -->
+    <script src="https://mu425.sse.codesandbox.io/resources/myGun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script>
 
-<a class="github-button" href="https://github.com/Ivanx95/Java-C-MixUp" data-icon="octicon-star" aria-label="Star Ivanx95/Java-C-MixUp on GitHub">Star</a>
-</body>
+    <p>Peer to peer Chat test</p>
+
+    <form id="sign">
+      <input id="alias" placeholder="username" />
+      <input id="pass" type="password" placeholder="passphrase" />
+      <input id="in" type="submit" value="sign in" />
+      <input id="up" type="button" value="sign up" />
+    </form>
+
+    <ul></ul>
+
+    <form id="said">
+      <input id="say" />
+      <input id="speak" type="submit" value="speak" />
+    </form>
+
+    <script src="https://mu425.sse.codesandbox.io/resources/script.js"></script>
+  </body>
 </html>
