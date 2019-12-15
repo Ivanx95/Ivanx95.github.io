@@ -1,5 +1,5 @@
 
-const localPath ="Ivanx95.github.io/"
+const localPath =""
 
 
 export {localPath};

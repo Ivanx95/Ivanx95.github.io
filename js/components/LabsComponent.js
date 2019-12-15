@@ -36,6 +36,9 @@ try {
 
     const col2 = await column();
   
+   	let openCvBanner =  fatherComponent.querySelector('#openCvBanner');
+           
+    openCvBanner.classList.toggle('is-loading');       
     const card2 = await canvasCard("Output",null,mixValueProperties);
   
     col2.appendChild(card2);
@@ -44,13 +47,19 @@ try {
 
         var introColumns =element.querySelector(".intro-columns");
 
+		let progressBar =  fatherComponent.querySelectorAll('.progress');
+		
          introColumns.appendChild(col1);
          introColumns.appendChild(col2);
          console.log('OpenCV fully loaded');
-         let openCvBanner =  fatherComponent.querySelector('#openCvBanner');
+
          if(openCvBanner!=null){
+          // openCvBanner.classList.toggle('is-loading');    
            openCvBanner.innerHTML="OpenCV fully loaded";
           
+          if(progressBar){
+          	progressBar[0].setAttribute("value", "100");
+          }
            var imgElement = card.querySelector(".canvas");
    
            let inputFile =fileInput.querySelector('.file-input');
