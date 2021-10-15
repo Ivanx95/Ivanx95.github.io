@@ -40,6 +40,7 @@ export async function projects(fatherComponent){
     let cMixBtn = await buttonCMixUp();
 
     card(col1,"springFx.png","springFx.png", "Spring javafx", "SimplePTV made with spring-boot-support and javafx 8");
+    card(col1,"card_client.png","card_client.png", '<p>Vanilla js complete card pints paas <a href="http://mycard.host/">mycard </a></p>');
     card(col2,"electron.png","electron.png", "SimplePTV Electron", "SimplePTV made with ElectronJS  Bulma CSS and Sequelize ");
     let mixBtnNode = {".intro-content":cMixBtn};
     card(col3,"java_c.png","java_c.png", "Java c++ legacy mix", "JVM controlled by a C program",mixBtnNode);     
