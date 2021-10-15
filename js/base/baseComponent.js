@@ -1,6 +1,6 @@
 
 
-var localPath ="Ivanx95.github.io/"
+var localPath =""
 function render (file, fatherComponent){
 
     

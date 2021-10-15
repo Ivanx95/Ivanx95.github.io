@@ -24,9 +24,28 @@ function onInit(){
         }, 100);
     }
 
-
+	configureStaticHTML();
 }
 
 
+function configureStaticHTML(){
+	let navBar=document.querySelector('#burguer');
+	
+	if(navBar){
+	
+		navBar.addEventListener('click', function(e){
+		
+			let target= navBar.dataset.target; 
+			let navMenu=document.getElementById(target);
+			
+			if(navMenu){
+			navBar.classList.toggle('is-active');
+			navMenu.classList.toggle('is-active');
+			}
+		})
+		
+		
+	}
 
+}
 
