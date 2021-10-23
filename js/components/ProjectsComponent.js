@@ -21,7 +21,7 @@ import {LoaderSingleton} from './Utils/LoaderSingleton.js';
 let pointCardDesc = 
 `<p><a href="http://mycard.host/">MyCard:</a> A complete vanilla js 
 card points PaaS, is a project torwards to be a fully 
-runnning business</p>`;
+running business</p>`;
 
 
 
