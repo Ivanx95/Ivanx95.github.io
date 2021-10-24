@@ -21,7 +21,9 @@ import {LoaderSingleton} from './Utils/LoaderSingleton.js';
 let pointCardDesc = 
 `<p><a href="http://mycard.host/">MyCard:</a> A complete vanilla js 
 card points PaaS, is a project torwards to be a fully 
-running business</p>`;
+running business, aimed to be developed almost from scratch,
+made with the less possible frameworks, less cloud possible providers
+</p>`;
 
 
 
@@ -36,9 +38,11 @@ export async function projects(fatherComponent){
 
     let row1=document.createElement("div");
     row1.classList.add("columns");
+    
 
     let row2=document.createElement("div");
     row2.classList.add("columns");
+    
 
     const col4 = await column();
     const col3 = await column();
