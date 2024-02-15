@@ -70,7 +70,7 @@ export async function projects(fatherComponent){
     let mixBtnDesc =`<a class="github-button" href="https://github.com/Ivanx95/Java-C-MixUp" data-icon="octicon-star" aria-label="Star Ivanx95/Java-C-MixUp on GitHub">Star</a>`;
     let javaFxButton = createBtn(javaFxBtnDesc);
 
-     card(col5,"","", "Lzc logistics", `A landing page for Logistics company in Mexico, <a href="https://camiones.pages.dev/">web page:</a>`, {});
+     card(col5,"","", "Lzc logistics", `A landing page for Logistics company in Mexico, <a href="https://camiones.pages.dev/">web page:</a>`);
     card(col4,"card_client.png","card_client.png","MyCard", pointCardDesc);
     card(col2,"springFx.png","springFx.png", "Spring javafx", "A simple POS made with spring-boot-support and javafx 8", {".intro-content":javaFxButton});
     card(col3,"electron.png","electron.png", "SimplePTV Electron", "A simple POS made with ElectronJS  Bulma CSS and Sequelize ", {".intro-content":createBtn(electronPTVBtnDesc)});
