@@ -41,22 +41,26 @@ export async function projects(fatherComponent){
     
 
     let row2=document.createElement("div");
+     let row3=document.createElement("div");
     row2.classList.add("columns");
     
+    const col5 = await column();
+    const col4 = col5.cloneNode(true);
+    const col3 = col5.cloneNode(true);
 
-    const col4 = await column();
-    const col3 = await column();
-    const col2 = await column();
-    const col1 = await column();
+    const col2 =col5.cloneNode(true);
+    const col1 =col5.cloneNode(true);
 
     row1.appendChild(col4);
     row1.appendChild(col3);
 
     row2.appendChild(col2);
     row2.appendChild(col1);
-
+    row3.appendChild(col5);
+    
     element.appendChild(row1);
     element.appendChild(row2);
+    element.appendChild(row3);
    
     let cMixBtn = await buttonCMixUp();
     let javaFxBtnDesc = 
@@ -66,6 +70,7 @@ export async function projects(fatherComponent){
     let mixBtnDesc =`<a class="github-button" href="https://github.com/Ivanx95/Java-C-MixUp" data-icon="octicon-star" aria-label="Star Ivanx95/Java-C-MixUp on GitHub">Star</a>`;
     let javaFxButton = createBtn(javaFxBtnDesc);
 
+     card(col5,"","", "Lzc logistics", "A landing page for Logistics company in Mexico", {});
     card(col4,"card_client.png","card_client.png","MyCard", pointCardDesc);
     card(col2,"springFx.png","springFx.png", "Spring javafx", "A simple POS made with spring-boot-support and javafx 8", {".intro-content":javaFxButton});
     card(col3,"electron.png","electron.png", "SimplePTV Electron", "A simple POS made with ElectronJS  Bulma CSS and Sequelize ", {".intro-content":createBtn(electronPTVBtnDesc)});
